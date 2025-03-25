@@ -17,11 +17,15 @@ int main()
     bool alarmState = OFF;
 
     while (true) {
+        // Si se detecta gas o sobre temepratura -> alarma state ON
+        // alarmLed <- alarmState
+        // Si se preciona el boton de apagado alamState OFF.
 
         if ( gasDetector || overTempDetector ) {
             alarmState = ON;
         }
-
+        
+        //Muestro el estado de la alarma con alarmLed.
         alarmLed = alarmState;
 
         if ( alarmOffButton ) {
